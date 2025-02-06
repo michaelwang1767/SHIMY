@@ -1,0 +1,93 @@
+你好！看起来你的HTML代码有点不完整。你可能想要继续定义霓虹背景动画的样式。让我帮你补全这个部分：
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIMY - Motordreams</title>
+    <style>
+        /* 页面基础样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            color: #00f1ff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* SHIMY 品牌名称 */
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-align: center;
+            background: linear-gradient(45deg, #00f1ff, #ff00ff);
+            background-size: 300% 300%;
+            animation: gradient 3s ease infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 广告语 */
+        h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #00f1ff;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 霓虹背景动画 */
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 1) 80%);
+            overflow: hidden;
+        }
+
+        /* 动态霓虹灯条 */
+        .neon-bar {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #00f1ff, #ff00ff, #00f1ff);
+            background-size: 200% 200%;
+            animation: neon 2s linear infinite;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes neon {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <h1>SHIMY</h1>
+    <h2>Motordreams</h2>
+    <div class="neon-bar"></div>
+</body>
+</html>
+```
+
